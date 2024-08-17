@@ -3,23 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قناة فريق صناع المستقبل - موارد طلاب البكالوريا</title>
+    <title>فريق صناع المستقبل - الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <style>
+        /* إضافات CSS للتأثيرات الخلفية والتنسيق */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            direction: rtl;
             margin: 0;
             padding: 0;
+            background: linear-gradient(to right, #ffffff, #f0f4f8);
+            color: #333;
         }
         header {
-            background-color: #343a40;
+            background: #007bff;
             color: white;
-            padding: 10px 0;
+            padding: 15px;
             text-align: center;
+            position: relative;
+        }
+        .news-ticker {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #0056b3;
+            color: white;
+            padding: 5px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .news-ticker span {
+            display: inline-block;
+            padding: 0 10px;
+            animation: ticker 10s linear infinite;
+        }
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
         nav {
-            background-color: #007bff;
+            background: #343a40;
+            color: white;
             padding: 10px;
             text-align: center;
         }
@@ -37,175 +63,144 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        h2 {
-            color: #007bff;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        a {
+        .cta-button {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
             text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
         }
-        a:hover {
-            color: #0056b3;
+        .cta-button:hover {
+            background: #218838;
         }
-        .section {
-            margin-bottom: 40px;
-        }
-        .table-container {
-            overflow-x: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        table, th, td {
+        .ad-space {
+            background: #f8f9fa;
             border: 1px solid #dee2e6;
-        }
-        th, td {
-            padding: 10px;
+            padding: 20px;
+            margin: 20px 0;
             text-align: center;
         }
-        footer {
-            background-color: #343a40;
+        .footer {
+            background: #343a40;
             color: white;
             padding: 20px 0;
             text-align: center;
         }
+        .footer a {
+            color: #17a2b8;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .subscribe-form {
+            background: #e9ecef;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .subscribe-form input[type="email"] {
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .subscribe-form input[type="submit"] {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .subscribe-form input[type="submit"]:hover {
+            background: #0056b3;
+        }
+        .countdown {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>قناة فريق صناع المستقبل</h1>
-        <p>دليل شامل لطلاب البكالوريا - القسم العلمي</p>
+        <div class="news-ticker">
+            <span>آخر الأخبار: استعدادات البكالوريا بدأت، قم بزيارة موقعنا للحصول على أحدث الموارد!</span>
+        </div>
+        <h1>فريق صناع المستقبل</h1>
+        <p>مرحباً بكم في موقعنا الشامل لطلاب البكالوريا</p>
     </header>
 
     <nav>
-        <a href="#materials">المواد الدراسية</a>
-        <a href="#videos">الفيديوهات التعليمية</a>
-        <a href="#study-tips">نصائح للدراسة</a>
-        <a href="#schedule">الجدول الدراسي</a>
-        <a href="#contact">تواصل معنا</a>
+        <a href="index.html">الرئيسية</a>
+        <a href="pages/subjects.html">المواد الدراسية</a>
+        <a href="pages/videos.html">الفيديوهات التعليمية</a>
+        <a href="pages/study-tips.html">نصائح للدراسة</a>
+        <a href="pages/schedule.html">الجدول الدراسي</a>
+        <a href="pages/downloads.html">تحميل الملفات</a>
+        <a href="pages/gallery.html">معرض الصور</a>
+        <a href="pages/about.html">نبذة عنا</a>
+        <a href="pages/contact.html">تواصل معنا</a>
     </nav>
 
-    <div class="container">
+    <main>
+        <div class="container">
+            <div class="countdown">
+                <p>العد التنازلي للامتحانات النهائية:</p>
+                <div id="countdown-timer"></div>
+            </div>
 
-        <!-- قسم المواد الدراسية -->
-        <div id="materials" class="section">
-            <h2>المواد الدراسية</h2>
-            <ul>
-                <li><a href="https://example.com/mathematics.pdf" target="_blank">ملف الرياضيات</a></li>
-                <li><a href="https://example.com/physics.pdf" target="_blank">ملف الفيزياء</a></li>
-                <li><a href="https://example.com/chemistry.pdf" target="_blank">ملف الكيمياء</a></li>
-                <li><a href="https://example.com/biology.pdf" target="_blank">ملف علم الأحياء</a></li>
-                <li><a href="https://example.com/arabic.pdf" target="_blank">ملف اللغة العربية</a></li>
-                <li><a href="https://example.com/english.pdf" target="_blank">ملف اللغة الإنجليزية</a></li>
-            </ul>
-        </div>
+            <div class="ad-space">
+                <h2>إعلانات الأساتذة</h2>
+                <p>احصل على أحدث الدورات والمواد التعليمية من أفضل الأساتذة. تواصل معنا للحصول على المزيد من المعلومات.</p>
+            </div>
 
-        <!-- قسم الفيديوهات التعليمية -->
-        <div id="videos" class="section">
-            <h2>الفيديوهات التعليمية</h2>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=example1" target="_blank">شرح درس التكامل في الرياضيات</a></li>
-                <li><a href="https://www.youtube.com/watch?v=example2" target="_blank">مفاهيم أساسية في الفيزياء</a></li>
-                <li><a href="https://www.youtube.com/watch?v=example3" target="_blank">التفاعلات الكيميائية</a></li>
-                <li><a href="https://www.youtube.com/watch?v=example4" target="_blank">علم الوراثة</a></li>
-                <li><a href="https://www.youtube.com/watch?v=example5" target="_blank">قواعد اللغة العربية</a></li>
-                <li><a href="https://www.youtube.com/watch?v=example6" target="_blank">اللغة الإنجليزية - قواعد الزمن الماضي</a></li>
-            </ul>
-        </div>
+            <div class="subscribe-form">
+                <h2>اشترك في نشرتنا الإخبارية</h2>
+                <form action="https://mailchimp.com" method="POST">
+                    <input type="email" name="EMAIL" placeholder="أدخل بريدك الإلكتروني" required>
+                    <input type="submit" value="اشترك الآن">
+                </form>
+            </div>
 
-        <!-- قسم نصائح للدراسة -->
-        <div id="study-tips" class="section">
-            <h2>نصائح للدراسة</h2>
-            <ul>
-                <li>حدد أهدافك الدراسية وابدأ بالأهم.</li>
-                <li>قم بإعداد جدول دراسي يومي والتزم به.</li>
-                <li>استخدم الألوان لتحديد النقاط المهمة في ملخصاتك.</li>
-                <li>استرح بين فترات الدراسة للحفاظ على تركيزك.</li>
-                <li>تأكد من فهمك للمفاهيم قبل حفظها.</li>
-            </ul>
-        </div>
+            <div>
+                <h2>الأحداث القادمة</h2>
+                <ul>
+                    <li>ورشة عمل عن إدارة الوقت - 25 أغسطس 2024</li>
+                    <li>ندوة حول كيفية الاستعداد للامتحانات - 10 سبتمبر 2024</li>
+                </ul>
+            </div>
 
-        <!-- قسم الجدول الدراسي -->
-        <div id="schedule" class="section">
-            <h2>الجدول الدراسي</h2>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>اليوم</th>
-                            <th>المادة الأولى</th>
-                            <th>المادة الثانية</th>
-                            <th>المادة الثالثة</th>
-                            <th>مراجعة</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>الأحد</td>
-                            <td>رياضيات</td>
-                            <td>فيزياء</td>
-                            <td>لغة إنجليزية</td>
-                            <td>مراجعة شاملة</td>
-                        </tr>
-                        <tr>
-                            <td>الإثنين</td>
-                            <td>كيمياء</td>
-                            <td>علم أحياء</td>
-                            <td>لغة عربية</td>
-                            <td>حل أسئلة</td>
-                        </tr>
-                        <tr>
-                            <td>الثلاثاء</td>
-                            <td>رياضيات</td>
-                            <td>فيزياء</td>
-                            <td>لغة إنجليزية</td>
-                            <td>مراجعة شاملة</td>
-                        </tr>
-                        <tr>
-                            <td>الأربعاء</td>
-                            <td>كيمياء</td>
-                            <td>علم أحياء</td>
-                            <td>لغة عربية</td>
-                            <td>حل أسئلة</td>
-                        </tr>
-                        <tr>
-                            <td>الخميس</td>
-                            <td>رياضيات</td>
-                            <td>فيزياء</td>
-                            <td>لغة إنجليزية</td>
-                            <td>مراجعة شاملة</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div>
+                <h2>فيديوهات ترويجية</h2>
+                <p>شاهد الفيديوهات الترويجية من قنواتنا على يوتيوب:</p>
+                <ul>
+                    <li><a href="https://youtube.com/@mk.syr.academy?si=K02yu7UYZrkbzQQa" target="_blank">قناة الرياضيات</a></li>
+                    <li><a href="https://youtube.com/@homamhamdan2?si=movUuca--wHKWAwm" target="_blank">قناة اللغة العربية</a></li>
+                    <li><a href="https://youtube.com/@user-bx9ne8iz2c?si=maFVx19SJuCHuIXH" target="_blank">قناة الكيمياء</a></li>
+                    <li><a href="https://youtube.com/@myway.education?si=QWTGO_HgTens78LE" target="_blank">قناة الفيزياء</a></li>
+                </ul>
             </div>
         </div>
+    </main>
 
-        <!-- قسم تواصل معنا -->
-        <div id="contact" class="section">
-            <h2>تواصل معنا</h2>
-            <p>للمزيد من المعلومات والمساعدة، يمكنكم التواصل معنا عبر:</p>
-            <p><a href="https://t.me/FutureMakers2025" target="_blank">قناة التليغرام @FutureMakers2025</a></p>
-            <p>أو عبر البريد الإلكتروني: <a href="mailto:info@futuremakers.com">info@futuremakers.com</a></p>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 قناة فريق صناع المستقبل. جميع الحقوق محفوظة.</p>
+    <footer class="footer">
+        <p>&copy; 2024 فريق صناع المستقبل. جميع الحقوق محفوظة.</p>
+        <p>تواصل معنا عبر:</p>
+        <p>
+            <a href="mailto:Hnzyr31@gmail.com">البريد الإلكتروني</a> |
+            <a href="https://www.facebook.com/groups/480087381473454/?ref=share&mibextid=NSMWBT">فيسبوك</a> |
+            <a href="https://chat.whatsapp.com/HA3eDiHD0gF2ayDMfWXXUJ">واتس آب</a> |
+            <a href="https://t.me/FutureMakers2025">تلغرام - القناة</a> |
+            <a href="https://t.me/Future_Makers_Team_2025">تلغرام - المجموعة</a> |
+            <a href="https://t.me/Nazer12344">تلغرام - المعرف الشخصي</a>
+        </p>
     </footer>
-
 </body>
 </html>
